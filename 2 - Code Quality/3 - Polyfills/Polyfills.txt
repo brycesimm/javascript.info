@@ -1,0 +1,32 @@
+A transpiler is a special piece of software that translates source code to another source code. 
+It can parse (“read and understand”) modern code and rewrite it using older syntax constructs, 
+so that it’ll also work in outdated engines.
+
+E.g. JavaScript before year 2020 didn’t have the “nullish coalescing operator” ??. 
+So, if a visitor uses an outdated browser, it may fail to understand the code like 
+height = height ?? 100.
+
+A transpiler would analyze our code and rewrite height ?? 100 into 
+(height !== undefined && height !== null) ? height : 100.
+
+Babel is a popular transpiler, although modern build systems like webpack 
+offer transpilation on every code change.
+
+A script that updates/adds new functions is called “polyfill”. 
+It “fills in” the gap and adds missing implementations in outdated versions.
+
+For example, Math.trunc(n) is a function that “cuts off” the decimal part of a number, 
+e.g Math.trunc(1.23) returns 1.
+
+In some (very outdated) JavaScript engines, there’s no Math.trunc, so such code will fail.
+Polyfill:
+if (!Math.trunc) { // if no such function
+  // implement it
+  Math.trunc = function(number) {
+    // Math.ceil and Math.floor exist even in ancient JavaScript engines
+    // they are covered later in the tutorial
+    return number < 0 ? Math.ceil(number) : Math.floor(number);
+  };
+}
+
+Libraries like core-js exist to provide polyfills when needed.
