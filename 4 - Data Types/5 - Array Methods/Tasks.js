@@ -56,7 +56,7 @@ arr = [5, 3, 8, 1];
 filterRangeInPlace(arr, 1, 4); // modifies arr itself
 console.log(arr); // [ 3, 1 ]
 
-//3. 
+//4. 
 arr = [5, 2, 1, -10, 8];
 
 function compare(a, b){
@@ -67,7 +67,7 @@ arr.sort(compare);
 
 console.log( arr ); // 8, 5, 2, 1, -10
 
-//4. 
+//5. 
 function copySorted(array){
     return array.slice().sort();
 }
@@ -79,7 +79,7 @@ let sorted = copySorted(arr);
 console.log( sorted ); // CSS, HTML, JavaScript
 console.log( arr ); // HTML, JavaScript, CSS (no changes)
 
-//5. A not-so-clean implementation:
+//6. A not-so-clean implementation:
 function Calculator() {
     this.calculate = (str) => {
         let a = 0;
@@ -142,3 +142,172 @@ console.log(calc.calculate("2 ** 3"));
 // The cleaner implementation done by javascript.info stores the methods inside an object in the 
 // Calculator object where the methods' names are just the operator so we can index by the operator 
 // passed in the calculate() string rather than needing if/elses or switch cases
+
+//7. 
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let users = [ john, pete, mary ];
+
+let names = users.map((user) => {
+    return user.name;
+})
+
+console.log( names ); // John, Pete, Mary
+
+//8. 
+john = { name: "John", surname: "Smith", id: 1 };
+pete = { name: "Pete", surname: "Hunt", id: 2 };
+mary = { name: "Mary", surname: "Key", id: 3 };
+
+users = [ john, pete, mary ];
+
+let usersMapped = users.map((user) => {
+    return {
+        fullName: user.name + " " + user.surname,
+        id: user.id
+    }
+});
+
+/*
+usersMapped = [
+  { fullName: "John Smith", id: 1 },
+  { fullName: "Pete Hunt", id: 2 },
+  { fullName: "Mary Key", id: 3 }
+]
+*/
+
+console.log( usersMapped[0].id ); // 1
+console.log( usersMapped[0].fullName ); // John Smith
+console.log(usersMapped);
+
+//9.
+// Solution done with Selection Sort, but can be done by:
+/*
+function sortByAge(arr){
+    arr.sort((a, b) => a.age - b.age);
+}
+*/
+john = { name: "John", age: 25 };
+pete = { name: "Pete", age: 30 };
+mary = { name: "Mary", age: 28 };
+
+arr = [ pete, john, mary ];
+
+function sortByAge(arr) {
+    let min = null;
+    for(let i = 0; i < arr.length; i++){
+        min = i;
+        for(let j = i + 1; j < arr.length; j++){
+            if(arr[j].age < arr[min].age){
+                min = j;
+            }
+        }
+        let tempObj = arr[i];
+        arr[i] = arr[min];
+        arr[min] = tempObj;
+    }
+}
+
+sortByAge(arr);
+
+// now: [john, mary, pete]
+console.log(arr[0].name); // John
+console.log(arr[1].name); // Mary
+console.log(arr[2].name); // Pete
+
+//10.
+arr = [1, 2, 3];
+
+function shuffle(arr) {
+    for(let i = 0; i < arr.length; i++){
+        let randIndex = Math.floor((Math.random() * (arr.length)));
+        let temp = arr[i];
+        arr[i] = arr[randIndex];
+        arr[randIndex] = temp;
+    }
+    console.log(arr);
+}
+
+shuffle(arr);
+// arr = [3, 2, 1]
+
+shuffle(arr);
+// arr = [2, 1, 3]
+
+shuffle(arr);
+// arr = [3, 1, 2]
+
+//11.
+john = { name: "John", age: 25 };
+pete = { name: "Pete", age: 30 };
+mary = { name: "Mary", age: 29 };
+
+arr = [ john, pete, mary ];
+
+function getAverageAge(arr) {
+    let average = arr.reduce((sum, a) => {
+        return sum += a.age;
+    }, 0) / arr.length;
+    return average;
+}
+
+console.log( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+
+//12.
+// Could have been simpler using namesFound[] as the return value and using a loop
+// to iterate, but I thought using the filter method as the iterating loop to be cheeky
+function unique(arr) {
+    let namesFound = [];
+    let filteredArr = arr.filter((str) => {
+        if(!namesFound.includes(str)){
+            namesFound.push(str);
+            return str;
+        }
+    });
+    return filteredArr;
+}
+
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+
+console.log( unique(strings) ); // Hare, Krishna, :-O
+
+//13. 
+// This can also be achieved through reduce:
+/*
+function groupById(arr) {
+    return arr.reduce((obj, user) => {
+            obj[user.id] =  user;
+            return obj;
+        }, {});
+}
+*/
+users = [
+  {id: 'john', name: "John Smith", age: 20},
+  {id: 'ann', name: "Ann Smith", age: 24},
+  {id: 'pete', name: "Pete Peterson", age: 31},
+];
+
+function groupById(arr) {
+    let obj = {};
+    for(let key of arr){
+        obj[key.id] = key; 
+    }
+    return obj;
+}
+
+let usersById = groupById(users);
+console.log(usersById);
+
+/*
+// after the call we should have:
+
+usersById = {
+  john: {id: 'john', name: "John Smith", age: 20},
+  ann: {id: 'ann', name: "Ann Smith", age: 24},
+  pete: {id: 'pete', name: "Pete Peterson", age: 31},
+}
+*/
