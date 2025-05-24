@@ -1,4 +1,4 @@
-// Different data types are iteratable aside from arrays. Lists, objects, strings etc. are iteratable too
+// Different data types are iterable aside from arrays. Lists, objects, strings etc. are iterable too
 // Iterables are objects that implement the Symbol.iterator() method
 // Array-likes, are objects that have indexes and a length; which make them look like Arrays
 
