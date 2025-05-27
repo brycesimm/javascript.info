@@ -19,7 +19,7 @@ This has all been an exercise to familiarize myself with the language on a deepe
 multiple hours across multiple nights working through as many of the relevant sections as possible. While </br>
 it is difficult to tell how many hours I've spent on this project, I have consistently spent between 2-4 hours </br>
 per night, when possible, working through each section. At the time of writing (5/26/2025) I have made it through </br>
-the Advanced Functions - Recursion and Stack section after starting from the very beginning of the course on 5/11/2025. </br>
+the Advanced Functions - Rest Parameters and Spread Syntax after starting from the very beginning of the course on 5/11/2025. </br>
 That would put me at about 55-60% through Part I, and 30-35% of the overall course if I plan on completing Part II as well. </br>
 Currently I plan on only completing Part I before moving on to React, and so I expect to be finished with javascript.info </br>
 around 6/8/2025. 
