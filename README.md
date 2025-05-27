@@ -4,8 +4,8 @@ A repo with everything I've learned about JavaScript from <a href="https://javas
 Not everything is included from the course, like the introduction; only the sections that I deemed relevant </br>
 for someone using ES6. 
 
-I've followed, through, copying information in my own words for the most part and often reusing code. All Task.js </br>
-files have the corresponding section tasks' solutions written solely by me and amended to include better solutions </br>
+I've followed most of the chapters and sections, copying information in my own words for the most part and often reusing code. 
+All Task.js files have the corresponding section tasks' solutions written solely by me and amended to include better solutions </br>
 if offered by javascript.info. It has been a wonderful resource to learn several core concepts that JavaScript has </br>
 to offer, ranging from simple primitive datatypes like string, number, boolean, etc. to more advanced concepts like </br>
 recursion, unit testing, promisification, modules, and more. I appreciate how much work went into the documentation </br>
