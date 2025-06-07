@@ -17,8 +17,5 @@ every task on my own before revealing the solution.
 
 This has all been an exercise to familiarize myself with the language on a deeper level, and I've spent multiple hours across multiple </br>
 nights working through as many of the relevant sections as possible. While it is difficult to tell how many hours I've spent on this </br>
-project, I have consistently spent between 2-4 hours per night, when possible, working through each section. At the time of writing </br>
-(5/26/2025) I have made it through the Advanced Functions - Rest Parameters and Spread Syntax after starting from the very beginning </br>
-of the course on 5/11/2025. That would put me at about 55-60% through Part I, and 30-35% of the overall course if I plan on completing </br>
-Part II as well. Currently I plan on only completing Part I before moving on to React, and so I expect to be finished with javascript.info </br>
-around 6/8/2025. 
+project, I have consistently spent between 2-4 hours per night, when possible, working through each section over the course of several </br>
+weeks. Currently, I plan on only completing Part I before moving on to React. 
