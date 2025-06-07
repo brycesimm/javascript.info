@@ -26,7 +26,7 @@ setTimeout((phrase, who) => console.log( phrase + ', ' + who), 1000, 'Hello', 'J
 // setTimeout() returns a timer id that we can use clearTimeout() with to cancel a 
 // scheduled function call, like if we change our mind:
 
-let timerId = (sayHi, 1000, 'Hello', 'John');
+let timerId = setTimeout(sayHi, 1000, 'Hello', 'John');
 function output(string){
     console.log(string);
 }
