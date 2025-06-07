@@ -11,11 +11,11 @@ to offer, ranging from simple primitive datatypes like string, number, boolean, 
 recursion, unit testing, promisification, modules, and more. I appreciate how much work went into the documentation </br>
 and found the content easy to absorb (for the most part) due to the attention to detail and concise examples given.
 
-My intention was not to copy the course documentation word-for-word, but to digest the information and reiterate it in my </br>
-own words to demonstrate my understanding of the topics. This extends to the exercises (tasks) in which I solved each and </br>
-every task on my own before revealing the solution.
+My intention was not to copy the course documentation word-for-word, but to digest the information and reiterate it </br>
+in my own words to demonstrate my understanding of the topics. This extends to the exercises (tasks) in which I </br>
+solved each and every task on my own before revealing the solution.
 
-This has all been an exercise to familiarize myself with the language on a deeper level, and I've spent multiple hours across multiple </br>
-nights working through as many of the relevant sections as possible. While it is difficult to tell how many hours I've spent on this </br>
-project, I have consistently spent between 2-4 hours per night, when possible, working through each section over the course of several </br>
-weeks. Currently, I plan on only completing Part I before moving on to React. 
+This has all been an exercise to familiarize myself with the language on a deeper level, and I've spent multiple hours </br>
+across multiple nights working through as many of the relevant sections as possible. While it is difficult to tell how </br>
+many hours I've spent on this project, I have consistently spent between 2-4 hours per night, when possible, working </br>
+through each section over the course of several weeks. Currently, I plan on only completing Part I before moving on to React. 
